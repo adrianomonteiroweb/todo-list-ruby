@@ -19,5 +19,16 @@ class Task
       status = @success ? "Success" : "Pendding"
       "ID: #{@id} | Title: #{@title} | Description: #{@description} | Status: #{status} | Created at: #{@created_date} | Successed at: #{@succes_date}"
     end
+
+    def to_h
+        {
+          id: @id,
+          title: @title,
+          description: @description,
+          success: @success,
+          created_date: @created_date,
+          succes_date: @succes_date
+        }
+      end
   end
   
